@@ -3,9 +3,9 @@ console.log(buildMessage());
 
 
 function buildMessage() {
-    const subject = capitalize(getRandomString(getSubjects()));
+  const subject = capitalize(getRandomString(getSubjects()));
   const activity = getRandomString(getActivities());
-  const affix = fiftyFifty ? getRandomString(getModalities()) : 'with ' + getRandomString(getSubjects());
+  const affix = fiftyFifty() ? getRandomString(getModalities()) : 'with ' + getRandomString(getSubjects());
   return `${subject} ${activity} ${affix}`;
 }
 
